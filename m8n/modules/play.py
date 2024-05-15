@@ -311,7 +311,7 @@ async def play(_, message: Message):
         file_name = get_file_name(audio)
         url = f"https://t.me/{UPDATE}"
         title = "Wa"
-        thumb_name = "https://graph.org/file/a7a4ba8ac40b7f0bfb46f.jpg"
+        thumb_name = "https://telegra.ph/file/5c23c9ec16822bb7a2403.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -578,7 +578,7 @@ async def play(_, message: Message):
     if await is_active_chat(message.chat.id):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
-            photo="https://graph.org/file/a7a4ba8ac40b7f0bfb46f.jpg",
+            photo="https://telegra.ph/file/5c23c9ec16822bb7a2403.jpg",
             caption="**[- تم ضفتها ݪقأئمة أݪأڼتضاࢪ 🫡.]({})**\n\n**- شغݪهأ أݪأخ : {}**\n**- تم ۅدأعتڪ ضفتها ݪقأئمة أݪأڼتضاࢪ : {}**".format(
                 url,
                 message.from_user.mention(),
@@ -605,14 +605,14 @@ async def play(_, message: Message):
         await music_on(message.chat.id)
         await add_active_chat(message.chat.id)
         await message.reply_photo(
-            photo="https://graph.org/file/a7a4ba8ac40b7f0bfb46f.jpg",
+            photo="https://telegra.ph/file/5c23c9ec16822bb7a2403.jpg",
             reply_markup=keyboard,
             caption="**[- تَم حبيبيَ اެصعَد اެسمعهاެ 🫶🏻.]({})\n\n**- شغݪهأ أݪأخ : {}**\n- أسم ڪࢪۅبي : {}**".format(
                 url, message.from_user.mention(), message.chat.title
             ),
         )
 
-    os.remove("https://graph.org/file/a7a4ba8ac40b7f0bfb46f.jpg")
+    os.remove("https://telegra.ph/file/5c23c9ec16822bb7a2403.jpg")
     return await lel.delete()
         
 
